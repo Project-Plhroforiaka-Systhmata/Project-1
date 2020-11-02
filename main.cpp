@@ -7,6 +7,6 @@
 using namespace  std;
 
 int main(){
-    cout << "o skan einai wraios" << endl;
+    cout << "o skan einai wraios1" << endl;
     return 0;
 }
