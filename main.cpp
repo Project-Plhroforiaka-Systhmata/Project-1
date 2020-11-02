@@ -7,5 +7,6 @@
 using namespace  std;
 
 int main(){
+    cout << "o skan einai wraios" << endl;
     return 0;
 }
