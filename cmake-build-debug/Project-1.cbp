@@ -82,7 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/dennis/CLionProjects/Project-1/list.cpp">
+			<Option target="Project-1"/>
+		</Unit>
+		<Unit filename="/home/dennis/CLionProjects/Project-1/list.h">
+			<Option target="Project-1"/>
+		</Unit>
 		<Unit filename="/home/dennis/CLionProjects/Project-1/main.cpp">
+			<Option target="Project-1"/>
+		</Unit>
+		<Unit filename="/home/dennis/CLionProjects/Project-1/vertex.cpp">
+			<Option target="Project-1"/>
+		</Unit>
+		<Unit filename="/home/dennis/CLionProjects/Project-1/vertex.h">
 			<Option target="Project-1"/>
 		</Unit>
 		<Unit filename="/home/dennis/CLionProjects/Project-1/CMakeLists.txt">

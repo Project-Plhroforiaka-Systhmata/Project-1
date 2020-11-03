@@ -143,6 +143,33 @@ Project-1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/build
 .PHONY : Project-1/fast
 
+list.o: list.cpp.o
+
+.PHONY : list.o
+
+# target to build an object file
+list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.o
+.PHONY : list.cpp.o
+
+list.i: list.cpp.i
+
+.PHONY : list.i
+
+# target to preprocess a source file
+list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.i
+.PHONY : list.cpp.i
+
+list.s: list.cpp.s
+
+.PHONY : list.s
+
+# target to generate assembly for a file
+list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.s
+.PHONY : list.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -170,6 +197,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vertex.o: vertex.cpp.o
+
+.PHONY : vertex.o
+
+# target to build an object file
+vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.o
+.PHONY : vertex.cpp.o
+
+vertex.i: vertex.cpp.i
+
+.PHONY : vertex.i
+
+# target to preprocess a source file
+vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.i
+.PHONY : vertex.cpp.i
+
+vertex.s: vertex.cpp.s
+
+.PHONY : vertex.s
+
+# target to generate assembly for a file
+vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.s
+.PHONY : vertex.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -179,9 +233,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project-1"
+	@echo "... list.o"
+	@echo "... list.i"
+	@echo "... list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vertex.o"
+	@echo "... vertex.i"
+	@echo "... vertex.s"
 .PHONY : help
 
 
