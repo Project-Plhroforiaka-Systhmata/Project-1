@@ -2,6 +2,6 @@
 
 ## Συμμετέχοντες
 
-* Διονύσης Αθανασόπουλος sdi1600001 GitHub: DionysisAth 
+* Διονύσιος-Άγγελος Αθανασόπουλος sdi1600001 GitHub: DionysisAth 
 * Αθανάσιος Τσοφύλας sdi1600186 GitHub: ThanosTsof 
 * Χρήστος Σκανδάλης sdi1600154 GitHub: chrisskan 
