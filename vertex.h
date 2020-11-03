@@ -10,6 +10,7 @@ public:
     string spec;
     list *specList;
     vertex(string);
+    int copyList(list*);
 };
 
 

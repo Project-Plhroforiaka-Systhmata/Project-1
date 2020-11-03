@@ -6,7 +6,7 @@
 using namespace std;
 
 struct node {
-    string spec;
+    string spec = "blank";
     node *next = NULL, *prev = NULL;
 };
 
@@ -14,7 +14,7 @@ class list {
 public:
     node *head, *tail;
     list();
-    void insert(string);
+    int insert(string);
     node pop();
     ~list();
 };

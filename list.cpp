@@ -5,7 +5,7 @@ list::list() {
     tail = NULL;
 }
 
-void list::insert(string name) {
+int list::insert(string name) {
     node *newNode = new node;
     newNode->spec = name;
     if(head == NULL) {
@@ -16,9 +16,20 @@ void list::insert(string name) {
         newNode->prev = tail;
         tail = newNode;
     }
+    return 0;
 }
 
 node list::pop() {
+    if(head == NULL){
+        node returnNode;
+        return returnNode;
+    }
+    if(head == tail){
+        node returnNode;
+        returnNode.spec = head->spec;
+        delete head;
+        return returnNode;
+    }
     node returnNode;
     returnNode.spec = head->spec;
     head = head->next;
