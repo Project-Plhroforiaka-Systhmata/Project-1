@@ -16,5 +16,6 @@ int vertex::copyList(list *cpList) {
         temp = specList->pop();
     }
     delete specList;
+    specList = NULL;
     return 0;
 }

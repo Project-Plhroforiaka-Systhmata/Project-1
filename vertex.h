@@ -14,4 +14,4 @@ public:
 };
 
 
-#endif //PROJECT_1_VERTEX_H
+#endif

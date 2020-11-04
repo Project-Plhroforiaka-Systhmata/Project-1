@@ -20,17 +20,17 @@ int list::insert(string name) {
 }
 
 node list::pop() {
+    node returnNode;
     if(head == NULL){
-        node returnNode;
         return returnNode;
     }
     if(head == tail){
-        node returnNode;
         returnNode.spec = head->spec;
         delete head;
+        head = NULL;
+        tail = NULL;
         return returnNode;
     }
-    node returnNode;
     returnNode.spec = head->spec;
     head = head->next;
     delete head->prev;
