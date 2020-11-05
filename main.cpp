@@ -7,6 +7,6 @@
 using namespace  std;
 
 int main(){
-    cout << "o skan einai wraios12" << endl;
+
     return 0;
 }
