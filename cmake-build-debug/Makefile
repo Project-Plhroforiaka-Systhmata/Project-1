@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/treloubas76/CLionProjects/Project-1
+CMAKE_SOURCE_DIR = /home/dennis/CLionProjects/Project-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/treloubas76/CLionProjects/Project-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dennis/CLionProjects/Project-1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles /home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles /home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,59 +143,32 @@ Project-1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/build
 .PHONY : Project-1/fast
 
-DoubleLinkedList.o: DoubleLinkedList.cpp.o
+list.o: list.cpp.o
 
-.PHONY : DoubleLinkedList.o
-
-# target to build an object file
-DoubleLinkedList.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/DoubleLinkedList.cpp.o
-.PHONY : DoubleLinkedList.cpp.o
-
-DoubleLinkedList.i: DoubleLinkedList.cpp.i
-
-.PHONY : DoubleLinkedList.i
-
-# target to preprocess a source file
-DoubleLinkedList.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/DoubleLinkedList.cpp.i
-.PHONY : DoubleLinkedList.cpp.i
-
-DoubleLinkedList.s: DoubleLinkedList.cpp.s
-
-.PHONY : DoubleLinkedList.s
-
-# target to generate assembly for a file
-DoubleLinkedList.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/DoubleLinkedList.cpp.s
-.PHONY : DoubleLinkedList.cpp.s
-
-Record.o: Record.cpp.o
-
-.PHONY : Record.o
+.PHONY : list.o
 
 # target to build an object file
-Record.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/Record.cpp.o
-.PHONY : Record.cpp.o
+list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.o
+.PHONY : list.cpp.o
 
-Record.i: Record.cpp.i
+list.i: list.cpp.i
 
-.PHONY : Record.i
+.PHONY : list.i
 
 # target to preprocess a source file
-Record.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/Record.cpp.i
-.PHONY : Record.cpp.i
+list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.i
+.PHONY : list.cpp.i
 
-Record.s: Record.cpp.s
+list.s: list.cpp.s
 
-.PHONY : Record.s
+.PHONY : list.s
 
 # target to generate assembly for a file
-Record.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/Record.cpp.s
-.PHONY : Record.cpp.s
+list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.s
+.PHONY : list.cpp.s
 
 main.o: main.cpp.o
 
@@ -224,6 +197,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vertex.o: vertex.cpp.o
+
+.PHONY : vertex.o
+
+# target to build an object file
+vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.o
+.PHONY : vertex.cpp.o
+
+vertex.i: vertex.cpp.i
+
+.PHONY : vertex.i
+
+# target to preprocess a source file
+vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.i
+.PHONY : vertex.cpp.i
+
+vertex.s: vertex.cpp.s
+
+.PHONY : vertex.s
+
+# target to generate assembly for a file
+vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/vertex.cpp.s
+.PHONY : vertex.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,15 +233,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Project-1"
-	@echo "... DoubleLinkedList.o"
-	@echo "... DoubleLinkedList.i"
-	@echo "... DoubleLinkedList.s"
-	@echo "... Record.o"
-	@echo "... Record.i"
-	@echo "... Record.s"
+	@echo "... list.o"
+	@echo "... list.i"
+	@echo "... list.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vertex.o"
+	@echo "... vertex.i"
+	@echo "... vertex.s"
 .PHONY : help
 
 
