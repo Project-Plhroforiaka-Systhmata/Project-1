@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Project-1.dir/DoubleLinkedList.cpp.o"
+  "CMakeFiles/Project-1.dir/Record.cpp.o"
   "CMakeFiles/Project-1.dir/main.cpp.o"
   "Project-1"
   "Project-1.pdb"

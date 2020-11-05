@@ -3,4 +3,4 @@ project(Project-1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Project-1 main.cpp)
+add_executable(Project-1 main.cpp Record.cpp Record.h DoubleLinkedList.cpp DoubleLinkedList.h)
