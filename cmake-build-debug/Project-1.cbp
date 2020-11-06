@@ -100,10 +100,10 @@
 		<Unit filename="/home/treloubas76/CLionProjects/Project-1/hashTable.h">
 			<Option target="Project-1"/>
 		</Unit>
-		<Unit filename="/home/treloubas76/CLionProjects/Project-1/list.cpp">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-1/llist.cpp">
 			<Option target="Project-1"/>
 		</Unit>
-		<Unit filename="/home/treloubas76/CLionProjects/Project-1/list.h">
+		<Unit filename="/home/treloubas76/CLionProjects/Project-1/llist.h">
 			<Option target="Project-1"/>
 		</Unit>
 		<Unit filename="/home/treloubas76/CLionProjects/Project-1/main.cpp">

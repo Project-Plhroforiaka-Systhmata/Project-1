@@ -197,32 +197,32 @@ hashTable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/hashTable.cpp.s
 .PHONY : hashTable.cpp.s
 
-list.o: list.cpp.o
+llist.o: llist.cpp.o
 
-.PHONY : list.o
+.PHONY : llist.o
 
 # target to build an object file
-list.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.o
-.PHONY : list.cpp.o
+llist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/llist.cpp.o
+.PHONY : llist.cpp.o
 
-list.i: list.cpp.i
+llist.i: llist.cpp.i
 
-.PHONY : list.i
+.PHONY : llist.i
 
 # target to preprocess a source file
-list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.i
-.PHONY : list.cpp.i
+llist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/llist.cpp.i
+.PHONY : llist.cpp.i
 
-list.s: list.cpp.s
+llist.s: llist.cpp.s
 
-.PHONY : list.s
+.PHONY : llist.s
 
 # target to generate assembly for a file
-list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/list.cpp.s
-.PHONY : list.cpp.s
+llist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project-1.dir/build.make CMakeFiles/Project-1.dir/llist.cpp.s
+.PHONY : llist.cpp.s
 
 main.o: main.cpp.o
 
@@ -293,9 +293,9 @@ help:
 	@echo "... hashTable.o"
 	@echo "... hashTable.i"
 	@echo "... hashTable.s"
-	@echo "... list.o"
-	@echo "... list.i"
-	@echo "... list.s"
+	@echo "... llist.o"
+	@echo "... llist.i"
+	@echo "... llist.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

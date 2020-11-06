@@ -1,11 +1,11 @@
-#include "list.h"
+#include "llist.h"
 
-list::list() {
+llist::llist() {
     head = NULL;
     tail = NULL;
 }
 
-int list::insert(string name) {
+int llist::insert(string name) {
     node *newNode = new node;
     newNode->spec = name;
     if(head == NULL) {
@@ -19,7 +19,7 @@ int list::insert(string name) {
     return 0;
 }
 
-node list::pop() {
+node llist::pop() {
     node returnNode;
     if(head == NULL){
         return returnNode;
@@ -38,7 +38,7 @@ node list::pop() {
     return returnNode;
 }
 
-list::~list() {
+llist::~llist() {
     node *temp;
     temp = head;
     while(temp != NULL){

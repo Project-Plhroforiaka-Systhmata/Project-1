@@ -1,11 +1,11 @@
 #include "vertex.h"
 
 vertex::vertex(string name): spec(name) {
-    specList = new list;
+    specList = new llist;
     specList->insert(spec);
 }
 
-int vertex::copyList(list *cpList) {
+int vertex::copyList(llist *cpList) {
     if(specList->head == NULL){
         return 1;
     }

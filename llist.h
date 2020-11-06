@@ -1,5 +1,5 @@
-#ifndef PROJECT_1_LIST_H
-#define PROJECT_1_LIST_H
+#ifndef PROJECT_1_llist_H
+#define PROJECT_1_llist_H
 
 #include <string>
 
@@ -7,16 +7,16 @@ using namespace std;
 
 struct node {
     string spec = "blank";
-    node *next = NULL, *prev = NULL;
+    node *next = nullptr, *prev = nullptr;
 };
 
-class list {
+class llist {
 public:
     node *head, *tail;
-    list();
+    llist();
     int insert(string);
     node pop();
-    ~list();
+    ~llist();
 };
 
 
