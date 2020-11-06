@@ -42,7 +42,25 @@ public:
         }
     }
 
-    ~DoubleLinkedList(){
+    Node* pop(){
+        length--;
+        Node *tmp = last;
+        last = last->prev;
+        if (last){
+            last->next = nullptr;
+        }
+        if (length == 0){
+            first = nullptr;
+        }
+        delete tmp->rec->testStr;
+        delete tmp->rec;
+        tmp->rec = nullptr;
+        tmp->prev = nullptr;
+        tmp->next = nullptr;
+        delete tmp;
+    }
+
+    void freeRam(){
         Node *tmp = nullptr;
         tmp = first;
         while (tmp != nullptr){
@@ -50,7 +68,13 @@ public:
             delete tmp;
             tmp = first;
         }
+        this->length = 0;
+        this->first = nullptr;
+        this->last = nullptr;
+    }
 
+    ~DoubleLinkedList(){
+       freeRam();
     }
 
 };
