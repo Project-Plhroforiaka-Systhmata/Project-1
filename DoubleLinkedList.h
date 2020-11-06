@@ -42,7 +42,7 @@ public:
         }
     }
 
-    Node* pop(){
+    void pop(){
         length--;
         Node *tmp = last;
         last = last->prev;
