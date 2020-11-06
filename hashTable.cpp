@@ -2,7 +2,7 @@
 #include <iostream>
 #include "hashTable.h"
 
-hashTable::hashTable(int buckets, int size) : numBuckets(buckets), bucketSize(size) {
+hashTable::hashTable(int buckets) : numBuckets(buckets) {
     table = new bucket*[numBuckets];
     //create the requested number of buckets
     for (int i = 0; i < numBuckets; i++) {
@@ -28,4 +28,24 @@ void hashTable::insert(string key, vertex *vertSpec) {
     if (temp->currentRecords == temp->maxRecords) {
         temp->next = new bucket;
     }
+}
+
+int hashTable::search(string searchStr) {
+    for(int i = 0; i < numBuckets; i++){
+        bucket *temp = table[i];
+        while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                //operate search
+            }
+            temp = temp->next;
+        }
+    }
+    return 0;
+}
+
+hashTable::~hashTable() {
+    for (int i = 0; i < numBuckets; i++) {
+        delete table[i];
+    }
+    delete []table;
 }

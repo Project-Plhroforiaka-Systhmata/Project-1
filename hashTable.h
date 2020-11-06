@@ -9,10 +9,10 @@ class hashTable {
 public:
     bucket **table;
     int numBuckets;
-    int bucketSize;
     int hashFunction(string, int);
-    hashTable(int, int);
+    hashTable(int);
     void insert(string, vertex*);
+    int search(string);
     ~hashTable();
 };
 
