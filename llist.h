@@ -5,8 +5,10 @@
 
 using namespace std;
 
+class vertex;
+
 struct node {
-    string spec = "blank";
+    vertex *spec = NULL;
     node *next = nullptr, *prev = nullptr;
 };
 
@@ -14,8 +16,8 @@ class llist {
 public:
     node *head, *tail;
     llist();
-    int insert(string);
-    node pop();
+    int insert(vertex*);
+    vertex* pop();
     ~llist();
 };
 

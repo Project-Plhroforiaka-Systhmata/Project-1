@@ -2,20 +2,21 @@
 
 vertex::vertex(string name, string specs): spec(name), itemSpecs(specs) {
     specList = new llist;
-    specList->insert(spec);
+    specList->insert(this);
 }
 
 int vertex::copyList(llist *cpList) {
     if(specList->head == NULL){
         return 1;
     }
-    node temp;
-    temp = specList->pop();
-    while(temp.spec != "blank"){
-        cpList->insert(temp.spec);
-        temp = specList->pop();
+    llist *tempList = specList;
+    vertex *temp;
+    temp = tempList->pop();
+    while(temp != NULL){
+        cpList->insert(temp);
+        temp->specList = cpList;
+        temp = tempList->pop();
     }
-    delete specList;
-    specList = NULL;
+    delete tempList;
     return 0;
 }

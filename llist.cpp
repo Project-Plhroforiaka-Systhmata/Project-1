@@ -5,7 +5,7 @@ llist::llist() {
     tail = NULL;
 }
 
-int llist::insert(string name) {
+int llist::insert(vertex *name) {
     node *newNode = new node;
     newNode->spec = name;
     if(head == NULL) {
@@ -19,23 +19,23 @@ int llist::insert(string name) {
     return 0;
 }
 
-node llist::pop() {
-    node returnNode;
+vertex* llist::pop() {
     if(head == NULL){
-        return returnNode;
+        return NULL;
     }
+    vertex *returnVert;
     if(head == tail){
-        returnNode.spec = head->spec;
+        returnVert = head->spec;
         delete head;
         head = NULL;
         tail = NULL;
-        return returnNode;
+        return returnVert;
     }
-    returnNode.spec = head->spec;
+    returnVert = head->spec;
     head = head->next;
     delete head->prev;
     head->prev = NULL;
-    return returnNode;
+    return returnVert;
 }
 
 llist::~llist() {
