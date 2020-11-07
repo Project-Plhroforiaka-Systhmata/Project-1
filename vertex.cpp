@@ -1,6 +1,6 @@
 #include "vertex.h"
 
-vertex::vertex(string name): spec(name) {
+vertex::vertex(string name, string specs): spec(name), itemSpecs(specs) {
     specList = new llist;
     specList->insert(spec);
 }

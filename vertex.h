@@ -7,9 +7,9 @@ using namespace std;
 
 class vertex {
 public:
-    string spec;
+    string spec, itemSpecs;
     llist *specList;
-    vertex(string);
+    vertex(string, string);
     int copyList(llist*);
 };
 
