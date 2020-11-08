@@ -16,5 +16,6 @@ int main(){
     test->pop();
     test->printList();
     test->~DoubleLinkedList();
+
     return 0;
 }

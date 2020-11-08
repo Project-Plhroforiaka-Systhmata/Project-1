@@ -4,6 +4,7 @@
 #include "hashTable.h"
 #include "vertex.h"
 #include "string.h"
+#include <ctime>
 
 void test_createllist(void){
     llist *mylist = new llist();
@@ -95,12 +96,29 @@ void test_createhash(void){
     TEST_ASSERT(table->numBuckets == 150);
     table = new hashTable(9999999);
     TEST_ASSERT(table->numBuckets == 9999999);
+    hashTable *test = new hashTable(0);
+    TEST_ASSERT(table->numBuckets == 0);
 }
 
 void test_inserthash(void){
     hashTable *table = new hashTable(300);
     table->insert("test",new vertex("test","test"));
-    
+    table->insert("test",new vertex("test1","test"));
+    table->insert("test",new vertex("test1","test"));
+    TEST_ASSERT(table->search("test") == 0);
+    TEST_ASSERT(table->search("test1") == 0);
+    TEST_ASSERT(table->search("sdfsdfsdf") == 1);
+
+    //overflow test below
+    long int before = time(0);
+    long int now = 0;
+    while (true){
+        table->insert("test",new vertex("test1","test"));
+        now = time(0);
+        if ((now - before) > 5){
+            break;
+        }
+    }
 }
 
 
@@ -147,6 +165,13 @@ void test_vertexcopy(void){
     } 
 }
 
+void test_destroyhash(void){
+    hashTable *test = new hashTable(9999);
+    test->~hashTable();
+    TEST_ASSERT(test->table == nullptr);
+    
+}
+
 TEST_LIST = {
     {"llist_create",test_createllist},
     {"llist_insert",test_insertllist},
@@ -156,6 +181,8 @@ TEST_LIST = {
     {"dll_pop",test_popdll},
     {"dll_destroy",test_destroydll},
     {"Hash Table Create",test_createhash},
+    {"Hash Table Insert",test_inserthash},
+    {"Hash Table Destroy",test_destroyhash},
     {"Vertex List Copy",test_vertexcopy},
     {nullptr,nullptr},
 };
