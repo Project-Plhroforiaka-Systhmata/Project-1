@@ -24,6 +24,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Make Test
-        run: ls #make -f ../../makefiletest
+        run: make -f makefiletest
 
       
