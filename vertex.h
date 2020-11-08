@@ -11,6 +11,7 @@ public:
     llist *specList;
     vertex(string, string);
     int copyList(llist*);
+    ~vertex();
 };
 
 
