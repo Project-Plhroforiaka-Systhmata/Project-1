@@ -20,3 +20,15 @@ int vertex::copyList(llist *cpList) {
     delete tempList;
     return 0;
 }
+
+vertex::~vertex() {
+    if (specList != NULL){
+        node *temp;
+        temp = specList->head;
+        while(temp != NULL){
+            temp->spec->specList = NULL;
+            temp = temp->next;
+        }
+        delete specList;
+    }
+}

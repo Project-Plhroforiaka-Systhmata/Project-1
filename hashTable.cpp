@@ -36,16 +36,26 @@ int hashTable::search(string searchStr) {
         while(temp != NULL) {
             for(int j = 0; j < temp->currentRecords; j++){
                 //operate search
+                if (temp->records[j].spec->spec == searchStr) return 0;
             }
             temp = temp->next;
         }
     }
-    return 0;
+    return 1;
 }
 
 hashTable::~hashTable() {
     for (int i = 0; i < numBuckets; i++) {
-        delete table[i];
+        bucket *temp = table[i];
+        bucket *temp2;
+        while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                delete temp->records[j].spec;
+            }
+            temp2 = temp;
+            temp = temp->next;
+            delete temp2;
+        }
     }
     delete []table;
 }
