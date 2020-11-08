@@ -1,0 +1,29 @@
+OBJS	= bucket.o hashTable.o llist.o vertex.o tests.o
+SOURCE	= bucket.cpp hashTable.cpp llist.cpp vertex.cpp tests.cpp
+HEADER	= acutest.h bucket.h DoubleLinkedList.h hashTable.h llist.h Record.h vertex.h
+OUT	= tests
+CC	 = g++
+FLAGS	 = -g -c
+LFLAGS	 = 
+
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
+
+bucket.o: bucket.cpp
+	$(CC) $(FLAGS) bucket.cpp -std=c++14
+
+hashTable.o: hashTable.cpp
+	$(CC) $(FLAGS) hashTable.cpp -std=c++14
+
+llist.o: llist.cpp
+	$(CC) $(FLAGS) llist.cpp -std=c++14
+
+vertex.o: vertex.cpp
+	$(CC) $(FLAGS) vertex.cpp -std=c++14
+
+tests.o: tests.cpp
+	$(CC) $(FLAGS) tests.cpp -std=c++14
+
+
+clean:
+	rm -f $(OBJS) $(OUT)
