@@ -96,7 +96,7 @@ void test_createhash(void){
     TEST_ASSERT(table->numBuckets == 150);
     table = new hashTable(9999999);
     TEST_ASSERT(table->numBuckets == 9999999);
-    hashTable *test = new hashTable(0);
+    table = new hashTable(0);
     TEST_ASSERT(table->numBuckets == 0);
 }
 
@@ -168,7 +168,6 @@ void test_vertexcopy(void){
 void test_destroyhash(void){
     hashTable *test = new hashTable(9999);
     delete test;
-    TEST_ASSERT(test == nullptr);
     TEST_ASSERT(test->table == nullptr);
     
 }

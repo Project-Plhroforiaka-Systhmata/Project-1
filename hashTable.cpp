@@ -59,4 +59,5 @@ hashTable::~hashTable() {
         }
     }
     delete []table;
+    table = nullptr;
 }
