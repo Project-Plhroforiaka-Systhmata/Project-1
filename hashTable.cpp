@@ -49,9 +49,6 @@ hashTable::~hashTable() {
         bucket *temp = table[i];
         bucket *temp2;
         while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                delete temp->records[j].spec;
-            }
             temp2 = temp;
             temp = temp->next;
             delete temp2;

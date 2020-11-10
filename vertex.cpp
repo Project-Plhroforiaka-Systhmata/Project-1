@@ -1,3 +1,4 @@
+#include <iostream>
 #include "vertex.h"
 
 vertex::vertex(string name, string specs): spec(name), itemSpecs(specs) {
@@ -26,7 +27,9 @@ vertex::~vertex() {
         node *temp;
         temp = specList->head;
         while(temp != NULL){
-            temp->spec->specList = NULL;
+            if(temp->spec->spec != spec) {
+                temp->spec->specList = NULL;
+            }
             temp = temp->next;
         }
         delete specList;

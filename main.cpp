@@ -3,20 +3,16 @@
 #include "iostream"
 #include "stdio.h"
 #include "DoubleLinkedList.h"
+#include "hashTable.h"
 
 
 using namespace  std;
 
 int main(){
-
-
-    DoubleLinkedList *test = new DoubleLinkedList();
-    test->AddNodeToEnd(new Record("test"));
-    test->printList();
-    test->pop();
-    test->printList();
-    test->~DoubleLinkedList();
+    vertex *testvert = new vertex("1", "hdgj");
+    hashTable *test = new hashTable(5);
+    test->insert("1", testvert);
+    delete test;
     cout<<"HEY SKAN"<<endl;
-
     return 0;
 }
