@@ -16,6 +16,7 @@ int main(){
     test->pop();
     test->printList();
     test->~DoubleLinkedList();
+    cout<<"HEY SKAN"<<endl;
 
     return 0;
 }
