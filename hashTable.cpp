@@ -3,7 +3,6 @@
 #include "hashTable.h"
 
 hashTable::hashTable(int buckets) : numBuckets(buckets) {
-    if(numBuckets == 0) exit(1);
     table = new bucket*[numBuckets];
     //create the requested number of buckets
     for (int i = 0; i < numBuckets; i++) {
