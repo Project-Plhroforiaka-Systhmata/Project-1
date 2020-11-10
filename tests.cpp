@@ -167,7 +167,8 @@ void test_vertexcopy(void){
 
 void test_destroyhash(void){
     hashTable *test = new hashTable(9999);
-    test->~hashTable();
+    delete test;
+    TEST_ASSERT(test == nullptr);
     TEST_ASSERT(test->table == nullptr);
     
 }
