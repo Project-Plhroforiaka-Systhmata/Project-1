@@ -3,6 +3,7 @@
 #include <string>
 #include "bucket.h"
 
+
 using namespace std;
 
 class hashTable {
@@ -12,7 +13,7 @@ public:
     int hashFunction(string, int);
     hashTable(int);
     void insert(string, vertex*);
-    int search(string);
+    vertex* search(string);
     ~hashTable();
 };
 

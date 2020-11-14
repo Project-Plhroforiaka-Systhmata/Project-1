@@ -30,18 +30,18 @@ void hashTable::insert(string key, vertex *vertSpec) {
     }
 }
 
-int hashTable::search(string searchStr) {
+vertex* hashTable::search(string searchStr) {
     for(int i = 0; i < numBuckets; i++){
         bucket *temp = table[i];
         while(temp != NULL) {
             for(int j = 0; j < temp->currentRecords; j++){
                 //operate search
-                if (temp->records[j].spec->spec == searchStr) return 0;
+                if (temp->records[j].spec->spec == searchStr) return temp->records[j].spec;
             }
             temp = temp->next;
         }
     }
-    return 1;
+    return null;
 }
 
 hashTable::~hashTable() {
@@ -49,6 +49,9 @@ hashTable::~hashTable() {
         bucket *temp = table[i];
         bucket *temp2;
         while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                delete temp->records[j].spec;
+            }
             temp2 = temp;
             temp = temp->next;
             delete temp2;
