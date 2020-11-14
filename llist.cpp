@@ -1,4 +1,8 @@
 #include "llist.h"
+#include "vertex.h"
+#include <iostream>
+
+using namespace std;
 
 llist::llist() {
     head = NULL;
@@ -21,6 +25,7 @@ int llist::insert(vertex *name) {
 
 vertex* llist::pop() {
     if(head == NULL){
+        cout << "in here" << endl;
         return NULL;
     }
     vertex *returnVert;
@@ -36,6 +41,15 @@ vertex* llist::pop() {
     delete head->prev;
     head->prev = NULL;
     return returnVert;
+}
+
+void llist::printList() {
+    node *temp;
+    temp = head;
+    while(temp != NULL){
+        cout << temp->spec->spec << endl;
+        temp = temp->next;
+    }
 }
 
 llist::~llist() {

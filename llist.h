@@ -18,6 +18,7 @@ public:
     llist();
     int insert(vertex*);
     vertex* pop();
+    void printList();
     ~llist();
 };
 

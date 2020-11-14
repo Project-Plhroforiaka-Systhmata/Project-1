@@ -7,7 +7,7 @@
 #include <cstring>
 #include <fstream>
 #include <sstream>
-#include <algorithm>
+#include <regex>
 #include <string>
 #include "hashTable.h"
 
@@ -26,7 +26,7 @@ int main(int argc, char **argv){
     struct dirent * entry2;
     struct dirent * entry3;
     string specs;
-    char path[200],path2[200];
+    char path[200],path2[200], path3[200], realPath[200];
     if (argv[1] == nullptr){
         cout << "Please insert json files path!" << endl;
         exit(-1);
@@ -41,18 +41,21 @@ int main(int argc, char **argv){
         strcpy(path,argv[1]);
 
         if(entry2->d_name[0]=='.') continue;
-        
+
+        strcpy(path3, entry2->d_name);
+        strcat(path3,"/");
         strcat(entry2->d_name,"/");
         strcat(path,entry2->d_name);
-        //cout<<path<<endl;
 
         dirp3 = opendir(path);
         while ((entry3 = readdir(dirp3)) != NULL) {
             specs="";
             strcpy(path2,path);
+            strcpy(realPath,path3);
             
             if(entry3->d_name[0]=='.') continue;
             strcat(path2,entry3->d_name);
+            strcat(realPath,entry3->d_name);
 
             fp = fopen(path2, "r");
             while ((ch = fgetc(fp)) != EOF)
@@ -62,8 +65,7 @@ int main(int argc, char **argv){
                 
             }
             fclose(fp);
-            hash->insert(path2,new vertex(path2,specs));
-            //cout << path2 << endl;
+            hash->insert(realPath,new vertex(realPath,specs));
             //cout<<specs<<endl;
         }
 
@@ -95,14 +97,12 @@ int main(int argc, char **argv){
         if(label == "1"){
             leftSpecId.append(".json");
             rightSpecId.append(".json");
-            replace(leftSpecId.begin(), leftSpecId.end(), "//", '/');
-            replace(rightSpecId.begin(), rightSpecId.end(), "//", '/');
-            //cout << line << endl;
+            leftSpecId = regex_replace(leftSpecId, regex("//"), "/");
+            rightSpecId = regex_replace(rightSpecId, regex("//"), "/");
+            cout << line << endl;
             vertex *vert1, *vert2;
             vert1 = hash->search(leftSpecId);
             vert2 = hash->search(rightSpecId);
-            cout << leftSpecId << endl;
-            cout << vert1->spec << endl;
             if(vert1 != nullptr && vert2 != nullptr) {
                 cout << "doing copy" << endl;
                 vert1->copyList(vert2->specList);

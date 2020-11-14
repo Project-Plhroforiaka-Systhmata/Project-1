@@ -14,6 +14,7 @@ int vertex::copyList(llist *cpList) {
     vertex *temp;
     temp = tempList->pop();
     while(temp != NULL){
+        cout << temp->spec << endl;
         cpList->insert(temp);
         temp->specList = cpList;
         temp = tempList->pop();

@@ -14,6 +14,7 @@ CMakeFiles/Project-1.dir/hashTable.cpp.o: ../vertex.h
 
 CMakeFiles/Project-1.dir/llist.cpp.o: ../llist.cpp
 CMakeFiles/Project-1.dir/llist.cpp.o: ../llist.h
+CMakeFiles/Project-1.dir/llist.cpp.o: ../vertex.h
 
 CMakeFiles/Project-1.dir/main.cpp.o: ../bucket.h
 CMakeFiles/Project-1.dir/main.cpp.o: ../hashTable.h
