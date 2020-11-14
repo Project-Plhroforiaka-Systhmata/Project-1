@@ -13,7 +13,6 @@ using namespace  std;
 int main(int argc, char **argv){
 
 
-
     auto *hash = new hashTable(1000);
     char ch;
     FILE *fp;
@@ -60,14 +59,12 @@ int main(int argc, char **argv){
             }
             fclose(fp);
             hash->insert(path2,new vertex(path2,specs));
-            //cout << path2 << "    " << specs << endl;
+            cout << path2 << endl;
             //cout<<specs<<endl;
         }
 
 
     }
-    
-    hash->search("2013_camera_specs") ;
 
 
     fp = fopen("sigmod_large_labelled_dataset.csv", "r");

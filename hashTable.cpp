@@ -23,24 +23,27 @@ void hashTable::insert(string key, vertex *vertSpec) {
     while(temp->next != NULL) {
         temp = temp->next;
     }
-    temp->records[table[index]->currentRecords].spec = vertSpec;       //change record's data
+    temp->records[temp->currentRecords].spec = vertSpec;       //change record's data
     temp->currentRecords++;         //increase current records counter
     if (temp->currentRecords == temp->maxRecords) {
         temp->next = new bucket;
+
     }
 }
 
 vertex* hashTable::search(string searchStr) {
-    for(int i = 0; i < numBuckets; i++){
-        bucket *temp = table[i];
-        while(temp != NULL) {
-            for(int j = 0; j < temp->currentRecords; j++){
-                //operate search
-                if (temp->records[j].spec->spec == searchStr) return temp->records[j].spec;
-            }
-            temp = temp->next;
+
+    int index = hashFunction(searchStr, numBuckets);
+    bucket *temp = table[index];
+    while(temp != NULL) {
+        for(int j = 0; j < temp->currentRecords; j++){
+            //operate search
+            if (temp->records[j].spec->spec == searchStr)
+                return temp->records[j].spec;
         }
+        temp = temp->next;
     }
+
     return nullptr;
 }
 

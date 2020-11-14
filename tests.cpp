@@ -103,10 +103,10 @@ void test_createhash(void){
 void test_inserthash(void){
     hashTable *table = new hashTable(300);
     table->insert("test",new vertex("test","test"));
-    table->insert("test",new vertex("test1","test"));
-    table->insert("test",new vertex("test2","test"));
-    table->insert("test",new vertex("SDXCV","test"));
-    table->insert("test",new vertex("lala","test"));
+    table->insert("test1",new vertex("test1","test1"));
+    table->insert("test2",new vertex("test2","test2"));
+    table->insert("SDXCV",new vertex("SDXCV","SDXCV"));
+    table->insert("lala",new vertex("lala","lala"));
     TEST_ASSERT(table->search("test") != nullptr);
     TEST_ASSERT(table->search("test1") != nullptr);
     TEST_ASSERT(table->search("test2") != nullptr);
@@ -177,15 +177,16 @@ void test_destroyhash(void){
 
 void test_search(void){
     hashTable *test = new hashTable(4);
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-    test->insert("test",new vertex("tet","test"));
-
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test",new vertex("test","test"));
+    test->insert("test1",new vertex("test1","test"));
     TEST_ASSERT(test->search("test") != nullptr);
+    TEST_ASSERT(test->search("xcxcv") == nullptr);
 }
 
 TEST_LIST = {
