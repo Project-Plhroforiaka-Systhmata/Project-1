@@ -41,7 +41,7 @@ vertex* hashTable::search(string searchStr) {
             temp = temp->next;
         }
     }
-    return null;
+    return nullptr;
 }
 
 hashTable::~hashTable() {
