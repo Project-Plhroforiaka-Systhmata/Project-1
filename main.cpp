@@ -5,6 +5,10 @@
 #include <dirent.h>
 #include <filesystem>
 #include <cstring>
+#include <fstream>
+#include <sstream>
+#include <algorithm>
+#include <string>
 #include "hashTable.h"
 
 
@@ -40,7 +44,7 @@ int main(int argc, char **argv){
         
         strcat(entry2->d_name,"/");
         strcat(path,entry2->d_name);
-        cout<<path<<endl;
+        //cout<<path<<endl;
 
         dirp3 = opendir(path);
         while ((entry3 = readdir(dirp3)) != NULL) {
@@ -59,7 +63,7 @@ int main(int argc, char **argv){
             }
             fclose(fp);
             hash->insert(path2,new vertex(path2,specs));
-            cout << path2 << endl;
+            //cout << path2 << endl;
             //cout<<specs<<endl;
         }
 
@@ -67,8 +71,45 @@ int main(int argc, char **argv){
     }
 
 
-    fp = fopen("sigmod_large_labelled_dataset.csv", "r");
-    if (fp){
+    fstream fin;
+    fin.open("../sigmod_medium_labelled_dataset.csv", ios::in);
+    string line, word, temp;
+    string leftSpecId, rightSpecId, label;
+    int count;
+    while (getline(fin, line)){
+        stringstream s(line);
+        count = 0;
+        while (getline(s, word, ',')) {
+            count++;
+            switch (count) {
+                case 1:
+                    leftSpecId = word;
+                    break;
+                case 2:
+                    rightSpecId = word;
+                    break;
+                default:
+                    label = word;
+            }
+        }
+        if(label == "1"){
+            leftSpecId.append(".json");
+            rightSpecId.append(".json");
+            replace(leftSpecId.begin(), leftSpecId.end(), "//", '/');
+            replace(rightSpecId.begin(), rightSpecId.end(), "//", '/');
+            //cout << line << endl;
+            vertex *vert1, *vert2;
+            vert1 = hash->search(leftSpecId);
+            vert2 = hash->search(rightSpecId);
+            cout << leftSpecId << endl;
+            cout << vert1->spec << endl;
+            if(vert1 != nullptr && vert2 != nullptr) {
+                cout << "doing copy" << endl;
+                vert1->copyList(vert2->specList);
+            }
+        }
+    }
+    /*if (fp){
         while ((ch = fgetc(fp)) != EOF)
         {
             //cout<<ch;
@@ -95,7 +136,7 @@ int main(int argc, char **argv){
             //cout<<ch;
         }
     }
-    fclose(fp);
+    fclose(fp);*/
 
 
 

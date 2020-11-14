@@ -32,7 +32,6 @@ void hashTable::insert(string key, vertex *vertSpec) {
 }
 
 vertex* hashTable::search(string searchStr) {
-
     int index = hashFunction(searchStr, numBuckets);
     bucket *temp = table[index];
     while(temp != NULL) {
@@ -43,7 +42,6 @@ vertex* hashTable::search(string searchStr) {
         }
         temp = temp->next;
     }
-
     return nullptr;
 }
 
