@@ -198,7 +198,7 @@ TEST_LIST = {
     {"dll_destroy",test_destroydll},
     {"Hash Table Create",test_createhash},
     {"Hash Table Insert",test_inserthash},
-    //{"Hash Table Search",test_search},
+    {"Hash Table Search",test_search},
     {"Hash Table Destroy",test_destroyhash},
     {"Vertex List Copy",test_vertexcopy},
     {nullptr,nullptr},
