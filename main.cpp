@@ -32,8 +32,10 @@ int main(int argc, char **argv){
     strcpy(path,argv[1]);
     strcat(path,"/");
     dirp = opendir(argv[1]);
-    //cout<<entry->d_name<<endl;
     dirp2 = opendir(argv[1]);
+    
+
+
     while ((entry2 = readdir(dirp2)) != NULL) {
         strcpy(path,argv[1]);
 
@@ -61,18 +63,21 @@ int main(int argc, char **argv){
             //cout<<specs<<endl;
         }
     }
-    cout<<specs<<endl;
+    //cout<<specs<<endl;
       
+
+
+
 
     fp = fopen("sigmod_large_labelled_dataset.csv", "r");
     while ((ch = fgetc(fp)) != EOF)
     {
-        cout<<ch;
+       // cout<<ch;
     }
     fp = fopen("sigmod_medium_labelled_dataset.csv", "r");
     while ((ch = fgetc(fp)) != EOF)
     {
-        cout<<ch;
+        //cout<<ch;
     } 
 
 
