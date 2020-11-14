@@ -4,22 +4,17 @@
 #include <stdio.h>
 #include <dirent.h>
 #include <filesystem>
-#include "DoubleLinkedList.h"
+#include <cstring>
+#include "hashTable.h"
 
 
 using namespace  std;
 
 int main(int argc, char **argv){
 
-    //DoubleLinkedList *test = new DoubleLinkedList();
-    //test->AddNodeToEnd(new Record("test"));
-    //test->printList();
-    //test->pop();
-    //test->printList();
-    //test->~DoubleLinkedList();
-    //cout<<"HEY SKAN"<<endl;
 
 
+    auto *hash = new hashTable(1000);
     char ch;
     FILE *fp;
     int file_count=0;
@@ -64,11 +59,15 @@ int main(int argc, char **argv){
                 
             }
             fclose(fp);
+            hash->insert(path2,new vertex(path2,specs));
+            //cout << path2 << "    " << specs << endl;
             //cout<<specs<<endl;
         }
+
+
     }
     
-      
+    hash->search("2013_camera_specs") ;
 
 
     fp = fopen("sigmod_large_labelled_dataset.csv", "r");
