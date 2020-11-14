@@ -29,6 +29,10 @@ int main(int argc, char **argv){
     struct dirent * entry3;
     string specs;
     char path[100],path2[100];
+    if (argv[1] == nullptr){
+        cout << "Please insert json files path!" << endl;
+        exit(-1);
+    }
     strcpy(path,argv[1]);
     strcat(path,"/");
     dirp = opendir(argv[1]);
@@ -51,7 +55,7 @@ int main(int argc, char **argv){
             strcpy(path2,path);
             if(entry3->d_name[0]=='.') continue;
             strcat(path2,entry3->d_name);
-            cout<<path2<<endl;
+            //cout<<path2<<endl;
 
             fp = fopen(path2, "r");
             while ((ch = fgetc(fp)) != EOF)
@@ -70,15 +74,34 @@ int main(int argc, char **argv){
 
 
     fp = fopen("sigmod_large_labelled_dataset.csv", "r");
-    while ((ch = fgetc(fp)) != EOF)
-    {
-       // cout<<ch;
+    if (fp){
+        while ((ch = fgetc(fp)) != EOF)
+        {
+            cout<<ch;
+        }
+
+    }else{
+        fp = fopen("../sigmod_large_labelled_dataset.csv", "r");
+        while ((ch = fgetc(fp)) != EOF)
+        {
+            //cout<<ch;
+        }
     }
+
     fp = fopen("sigmod_medium_labelled_dataset.csv", "r");
-    while ((ch = fgetc(fp)) != EOF)
-    {
-        //cout<<ch;
-    } 
+    if (fp){
+        while ((ch = fgetc(fp)) != EOF)
+        {
+            //cout<<ch;
+        }
+    }else{
+        fp = fopen("../sigmod_medium_labelled_dataset.csv", "r");
+        while ((ch = fgetc(fp)) != EOF)
+        {
+            //cout<<ch;
+        }
+    }
+
 
 
     return 0;

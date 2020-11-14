@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dennis/CLionProjects/Project-1/bucket.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/bucket.cpp.o"
-  "/home/dennis/CLionProjects/Project-1/hashTable.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/hashTable.cpp.o"
-  "/home/dennis/CLionProjects/Project-1/llist.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/llist.cpp.o"
-  "/home/dennis/CLionProjects/Project-1/main.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/main.cpp.o"
-  "/home/dennis/CLionProjects/Project-1/vertex.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/vertex.cpp.o"
+  "/home/treloubas76/CLionProjects/Project-1/bucket.cpp" "/home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/bucket.cpp.o"
+  "/home/treloubas76/CLionProjects/Project-1/hashTable.cpp" "/home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/hashTable.cpp.o"
+  "/home/treloubas76/CLionProjects/Project-1/llist.cpp" "/home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/llist.cpp.o"
+  "/home/treloubas76/CLionProjects/Project-1/main.cpp" "/home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/main.cpp.o"
+  "/home/treloubas76/CLionProjects/Project-1/vertex.cpp" "/home/treloubas76/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/vertex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
