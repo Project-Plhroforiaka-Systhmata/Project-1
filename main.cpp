@@ -20,9 +20,7 @@ int main(int argc, char **argv){
     auto *hash = new hashTable(1000);
     char ch;
     FILE *fp;
-    int file_count=0;
     DIR *dirp2,*dirp3;
-    struct dirent * entry;
     struct dirent * entry2;
     struct dirent * entry3;
     string specs;
@@ -74,7 +72,7 @@ int main(int argc, char **argv){
 
 
     fstream fin;
-    fin.open("../sigmod_medium_labelled_dataset.csv", ios::in);
+    fin.open("sigmod_medium_labelled_dataset.csv", ios::in);
     string line, word, leftSpecId, rightSpecId, label;
     int count;
     while (getline(fin, line)){
@@ -117,35 +115,6 @@ int main(int argc, char **argv){
             temp = temp->next;
         }
     }
-
-    /*if (fp){
-        while ((ch = fgetc(fp)) != EOF)
-        {
-            //cout<<ch;
-        }
-
-    }else{
-        fp = fopen("../sigmod_large_labelled_dataset.csv", "r");
-        while ((ch = fgetc(fp)) != EOF)
-        {
-            //cout<<ch;
-        }
-    }
-    fclose(fp);
-    fp = fopen("sigmod_medium_labelled_dataset.csv", "r");
-    if (fp){
-        while ((ch = fgetc(fp)) != EOF)
-        {
-            //cout<<ch;
-        }
-    }else{
-        fp = fopen("../sigmod_medium_labelled_dataset.csv", "r");
-        while ((ch = fgetc(fp)) != EOF)
-        {
-            //cout<<ch;
-        }
-    }
-    fclose(fp);*/
 
     
 
