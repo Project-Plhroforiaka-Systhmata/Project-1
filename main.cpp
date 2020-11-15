@@ -21,7 +21,7 @@ int main(int argc, char **argv){
     char ch;
     FILE *fp;
     int file_count=0;
-    DIR *dirp,*dirp2,*dirp3;
+    DIR *dirp2,*dirp3;
     struct dirent * entry;
     struct dirent * entry2;
     struct dirent * entry3;
@@ -33,7 +33,6 @@ int main(int argc, char **argv){
     }
     strcpy(path,argv[1]);
     strcat(path,"/");
-    dirp = opendir(argv[1]);
     dirp2 = opendir(argv[1]);
     
 
@@ -68,9 +67,10 @@ int main(int argc, char **argv){
             hash->insert(realPath,new vertex(realPath,specs));
             //cout<<specs<<endl;
         }
-
+        closedir(dirp3);
 
     }
+    closedir(dirp2);
 
 
     fstream fin;
