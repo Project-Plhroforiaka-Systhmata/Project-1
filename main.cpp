@@ -75,7 +75,7 @@ int main(int argc, char **argv){
 
     fstream fin;
     fin.open("../sigmod_medium_labelled_dataset.csv", ios::in);
-    string line, word, temp;
+    string line, word;
     string leftSpecId, rightSpecId, label;
     int count;
     while (getline(fin, line)){
@@ -94,21 +94,32 @@ int main(int argc, char **argv){
                     label = word;
             }
         }
+
         if(label == "1"){
             leftSpecId.append(".json");
             rightSpecId.append(".json");
             leftSpecId = regex_replace(leftSpecId, regex("//"), "/");
             rightSpecId = regex_replace(rightSpecId, regex("//"), "/");
-            cout << line << endl;
             vertex *vert1, *vert2;
             vert1 = hash->search(leftSpecId);
             vert2 = hash->search(rightSpecId);
-            if(vert1 != nullptr && vert2 != nullptr) {
+            if(vert1 != nullptr && vert2 != nullptr && vert1->specList != vert2->specList) {
                 cout << "doing copy" << endl;
                 vert1->copyList(vert2->specList);
             }
         }
     }
+
+    for (int i = 0; i < hash->numBuckets; i++) {
+        bucket *temp = hash->table[i];
+        while(temp != NULL) {
+            for(int j = 0; j < temp->currentRecords; j++){
+                temp->records[j].spec->printList();
+            }
+            temp = temp->next;
+        }
+    }
+
     /*if (fp){
         while ((ch = fgetc(fp)) != EOF)
         {
@@ -140,7 +151,6 @@ int main(int argc, char **argv){
 
     
 
-
-
+    delete hash;
     return 0;
 }

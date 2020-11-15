@@ -4,7 +4,7 @@
 
 using namespace std;
 
-llist::llist() {
+llist::llist() : printed(0) {
     head = NULL;
     tail = NULL;
 }
@@ -25,7 +25,6 @@ int llist::insert(vertex *name) {
 
 vertex* llist::pop() {
     if(head == NULL){
-        cout << "in here" << endl;
         return NULL;
     }
     vertex *returnVert;
@@ -41,15 +40,6 @@ vertex* llist::pop() {
     delete head->prev;
     head->prev = NULL;
     return returnVert;
-}
-
-void llist::printList() {
-    node *temp;
-    temp = head;
-    while(temp != NULL){
-        cout << temp->spec->spec << endl;
-        temp = temp->next;
-    }
 }
 
 llist::~llist() {

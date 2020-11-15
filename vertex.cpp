@@ -14,13 +14,27 @@ int vertex::copyList(llist *cpList) {
     vertex *temp;
     temp = tempList->pop();
     while(temp != NULL){
-        cout << temp->spec << endl;
         cpList->insert(temp);
         temp->specList = cpList;
         temp = tempList->pop();
     }
     delete tempList;
     return 0;
+}
+
+void vertex::printList() {
+    if(specList->printed){
+        return;
+    }
+    node *temp;
+    temp = specList->head;
+    while(temp != NULL){
+        if (temp->spec->spec != spec) {
+            cout << spec << " " << temp->spec->spec << endl;
+        }
+        temp = temp->next;
+    }
+    specList->printed = 1;
 }
 
 vertex::~vertex() {

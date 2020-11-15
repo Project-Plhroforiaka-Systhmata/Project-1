@@ -9,16 +9,16 @@ class vertex;
 
 struct node {
     vertex *spec = NULL;
-    node *next = nullptr, *prev = nullptr;
+    node *next = NULL, *prev = NULL;
 };
 
 class llist {
 public:
+    int printed;
     node *head, *tail;
     llist();
     int insert(vertex*);
     vertex* pop();
-    void printList();
     ~llist();
 };
 
