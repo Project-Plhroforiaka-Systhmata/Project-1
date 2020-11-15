@@ -72,7 +72,7 @@ int main(int argc, char **argv){
 
 
     fstream fin;
-    fin.open("sigmod_medium_labelled_dataset.csv", ios::in);
+    fin.open(argv[2], ios::in);
     string line, word, leftSpecId, rightSpecId, label;
     int count;
     while (getline(fin, line)){

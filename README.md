@@ -9,3 +9,6 @@
 
 ## Test Makefile Command
  make -f makefiletest
+
+
+./project1 specs_file csv_file

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "vertex.h"
 
-vertex::vertex(string name, string specs): spec(name), itemSpecs(specs), printed(0) {
+vertex::vertex(string name, string specs): printed(0), spec(name), itemSpecs(specs) {
     specList = new llist;
     specList->insert(this);
 }

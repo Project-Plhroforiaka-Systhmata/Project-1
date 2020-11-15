@@ -11,8 +11,7 @@ struct record {
 
 class bucket {
 public:
-    int currentRecords;
-    int maxRecords;
+    int currentRecords, maxRecords;
     record *records;
     bucket *next;
     bucket();

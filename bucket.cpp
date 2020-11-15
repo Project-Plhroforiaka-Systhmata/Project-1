@@ -1,7 +1,7 @@
 #include "bucket.h"
 #include <iostream>
 
-bucket::bucket() : maxRecords(4), currentRecords(0) {
+bucket::bucket() : currentRecords(0), maxRecords(4) {
     records = new record[maxRecords];
     next = NULL;
 }
