@@ -14,7 +14,6 @@ struct node {
 
 class llist {
 public:
-    int printed;
     node *head, *tail;
     llist();
     int insert(vertex*);

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "vertex.h"
 
-vertex::vertex(string name, string specs): spec(name), itemSpecs(specs) {
+vertex::vertex(string name, string specs): spec(name), itemSpecs(specs), printed(0) {
     specList = new llist;
     specList->insert(this);
 }
@@ -23,18 +23,15 @@ int vertex::copyList(llist *cpList) {
 }
 
 void vertex::printList() {
-    if(specList->printed){
-        return;
-    }
     node *temp;
     temp = specList->head;
     while(temp != NULL){
-        if (temp->spec->spec != spec) {
+        if (temp->spec->spec != spec && !temp->spec->printed) {
             cout << spec << " " << temp->spec->spec << endl;
         }
         temp = temp->next;
     }
-    specList->printed = 1;
+    printed = 1;
 }
 
 vertex::~vertex() {

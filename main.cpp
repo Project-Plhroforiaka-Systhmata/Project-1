@@ -75,8 +75,7 @@ int main(int argc, char **argv){
 
     fstream fin;
     fin.open("../sigmod_medium_labelled_dataset.csv", ios::in);
-    string line, word;
-    string leftSpecId, rightSpecId, label;
+    string line, word, leftSpecId, rightSpecId, label;
     int count;
     while (getline(fin, line)){
         stringstream s(line);
@@ -104,7 +103,6 @@ int main(int argc, char **argv){
             vert1 = hash->search(leftSpecId);
             vert2 = hash->search(rightSpecId);
             if(vert1 != nullptr && vert2 != nullptr && vert1->specList != vert2->specList) {
-                cout << "doing copy" << endl;
                 vert1->copyList(vert2->specList);
             }
         }

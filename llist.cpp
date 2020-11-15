@@ -4,7 +4,7 @@
 
 using namespace std;
 
-llist::llist() : printed(0) {
+llist::llist() {
     head = NULL;
     tail = NULL;
 }
