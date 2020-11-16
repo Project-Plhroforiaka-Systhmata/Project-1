@@ -2,23 +2,26 @@
 #include "vertex.h"
 
 vertex::vertex(string name, string specs): printed(0), spec(name), itemSpecs(specs) {
-    specList = new llist;
+    //create the list and insert self
+    specList = new list;
     specList->insert(this);
 }
 
-int vertex::copyList(llist *cpList) {
+int vertex::copyList(list *cpList) { //used in order to copy vertex specList to cpList
     if(specList->head == NULL){
         return 1;
     }
-    llist *tempList = specList;
+
+    //keep specList address
+    list *tempList = specList;
     vertex *temp;
     temp = tempList->pop();
     while(temp != NULL){
-        cpList->insert(temp);
-        temp->specList = cpList;
-        temp = tempList->pop();
+        cpList->insert(temp);       //insert popped vertex to cpList
+        temp->specList = cpList;    //change popped vertex's specList pointer to cpList
+        temp = tempList->pop();     //pop next vertex
     }
-    delete tempList;
+    delete tempList;    //delete the empty tempList
     return 0;
 }
 

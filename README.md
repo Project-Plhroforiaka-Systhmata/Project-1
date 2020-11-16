@@ -11,4 +11,4 @@
  make -f makefiletest
 
 
-./project1 specs_file csv_file
+./project1 specs_folder csv_file

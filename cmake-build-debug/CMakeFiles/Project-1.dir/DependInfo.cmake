@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/dennis/CLionProjects/Project-1/bucket.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/bucket.cpp.o"
   "/home/dennis/CLionProjects/Project-1/hashTable.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/hashTable.cpp.o"
-  "/home/dennis/CLionProjects/Project-1/llist.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/llist.cpp.o"
+  "/home/dennis/CLionProjects/Project-1/list.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/list.cpp.o"
   "/home/dennis/CLionProjects/Project-1/main.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/main.cpp.o"
   "/home/dennis/CLionProjects/Project-1/vertex.cpp" "/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles/Project-1.dir/vertex.cpp.o"
   )

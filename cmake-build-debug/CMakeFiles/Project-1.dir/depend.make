@@ -3,26 +3,26 @@
 
 CMakeFiles/Project-1.dir/bucket.cpp.o: ../bucket.cpp
 CMakeFiles/Project-1.dir/bucket.cpp.o: ../bucket.h
-CMakeFiles/Project-1.dir/bucket.cpp.o: ../llist.h
+CMakeFiles/Project-1.dir/bucket.cpp.o: ../list.h
 CMakeFiles/Project-1.dir/bucket.cpp.o: ../vertex.h
 
 CMakeFiles/Project-1.dir/hashTable.cpp.o: ../bucket.h
 CMakeFiles/Project-1.dir/hashTable.cpp.o: ../hashTable.cpp
 CMakeFiles/Project-1.dir/hashTable.cpp.o: ../hashTable.h
-CMakeFiles/Project-1.dir/hashTable.cpp.o: ../llist.h
+CMakeFiles/Project-1.dir/hashTable.cpp.o: ../list.h
 CMakeFiles/Project-1.dir/hashTable.cpp.o: ../vertex.h
 
-CMakeFiles/Project-1.dir/llist.cpp.o: ../llist.cpp
-CMakeFiles/Project-1.dir/llist.cpp.o: ../llist.h
-CMakeFiles/Project-1.dir/llist.cpp.o: ../vertex.h
+CMakeFiles/Project-1.dir/list.cpp.o: ../list.cpp
+CMakeFiles/Project-1.dir/list.cpp.o: ../list.h
+CMakeFiles/Project-1.dir/list.cpp.o: ../vertex.h
 
 CMakeFiles/Project-1.dir/main.cpp.o: ../bucket.h
 CMakeFiles/Project-1.dir/main.cpp.o: ../hashTable.h
-CMakeFiles/Project-1.dir/main.cpp.o: ../llist.h
+CMakeFiles/Project-1.dir/main.cpp.o: ../list.h
 CMakeFiles/Project-1.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Project-1.dir/main.cpp.o: ../vertex.h
 
-CMakeFiles/Project-1.dir/vertex.cpp.o: ../llist.h
+CMakeFiles/Project-1.dir/vertex.cpp.o: ../list.h
 CMakeFiles/Project-1.dir/vertex.cpp.o: ../vertex.cpp
 CMakeFiles/Project-1.dir/vertex.cpp.o: ../vertex.h
 

@@ -1,5 +1,5 @@
-#ifndef PROJECT_1_llist_H
-#define PROJECT_1_llist_H
+#ifndef PROJECT_1_LIST_H
+#define PROJECT_1_LIST_H
 
 #include <string>
 
@@ -12,13 +12,13 @@ struct node {
     node *next = NULL, *prev = NULL;
 };
 
-class llist {
+class list {
 public:
     node *head, *tail;
-    llist();
+    list();
     int insert(vertex*);
     vertex* pop();
-    ~llist();
+    ~list();
 };
 
 

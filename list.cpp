@@ -1,17 +1,19 @@
-#include "llist.h"
+#include "list.h"
 #include "vertex.h"
 #include <iostream>
 
 using namespace std;
 
-llist::llist() {
+list::list() {
     head = NULL;
     tail = NULL;
 }
 
-int llist::insert(vertex *name) {
+int list::insert(vertex *name) {
+    //create new node to insert
     node *newNode = new node;
     newNode->spec = name;
+
     if(head == NULL) {
         head = newNode;
         tail = newNode;
@@ -23,7 +25,7 @@ int llist::insert(vertex *name) {
     return 0;
 }
 
-vertex* llist::pop() {
+vertex* list::pop() {
     if(head == NULL){
         return NULL;
     }
@@ -42,7 +44,7 @@ vertex* llist::pop() {
     return returnVert;
 }
 
-llist::~llist() {
+list::~list() {
     node *temp;
     temp = head;
     while(temp != NULL){

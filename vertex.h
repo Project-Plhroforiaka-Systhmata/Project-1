@@ -1,7 +1,7 @@
 #ifndef PROJECT_1_VERTEX_H
 #define PROJECT_1_VERTEX_H
 #include <string>
-#include "llist.h"
+#include "list.h"
 
 using namespace std;
 
@@ -9,9 +9,9 @@ class vertex {
 public:
     int printed;
     string spec, itemSpecs;
-    llist *specList;
+    list *specList;
     vertex(string, string);
-    int copyList(llist*);
+    int copyList(list*);
     void printList();
     ~vertex();
 };

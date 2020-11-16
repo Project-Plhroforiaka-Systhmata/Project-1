@@ -82,12 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dennis/CLionProjects/Project-1/DoubleLinkedList.h">
-			<Option target="Project-1"/>
-		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-1/Record.h">
-			<Option target="Project-1"/>
-		</Unit>
 		<Unit filename="/home/dennis/CLionProjects/Project-1/bucket.cpp">
 			<Option target="Project-1"/>
 		</Unit>
@@ -100,10 +94,10 @@
 		<Unit filename="/home/dennis/CLionProjects/Project-1/hashTable.h">
 			<Option target="Project-1"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-1/llist.cpp">
+		<Unit filename="/home/dennis/CLionProjects/Project-1/list.cpp">
 			<Option target="Project-1"/>
 		</Unit>
-		<Unit filename="/home/dennis/CLionProjects/Project-1/llist.h">
+		<Unit filename="/home/dennis/CLionProjects/Project-1/list.h">
 			<Option target="Project-1"/>
 		</Unit>
 		<Unit filename="/home/dennis/CLionProjects/Project-1/main.cpp">

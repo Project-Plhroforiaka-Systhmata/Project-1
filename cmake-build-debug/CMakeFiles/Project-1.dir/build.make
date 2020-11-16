@@ -103,18 +103,18 @@ CMakeFiles/Project-1.dir/vertex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project-1.dir/vertex.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dennis/CLionProjects/Project-1/vertex.cpp -o CMakeFiles/Project-1.dir/vertex.cpp.s
 
-CMakeFiles/Project-1.dir/llist.cpp.o: CMakeFiles/Project-1.dir/flags.make
-CMakeFiles/Project-1.dir/llist.cpp.o: ../llist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project-1.dir/llist.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project-1.dir/llist.cpp.o -c /home/dennis/CLionProjects/Project-1/llist.cpp
+CMakeFiles/Project-1.dir/list.cpp.o: CMakeFiles/Project-1.dir/flags.make
+CMakeFiles/Project-1.dir/list.cpp.o: ../list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dennis/CLionProjects/Project-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project-1.dir/list.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project-1.dir/list.cpp.o -c /home/dennis/CLionProjects/Project-1/list.cpp
 
-CMakeFiles/Project-1.dir/llist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project-1.dir/llist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dennis/CLionProjects/Project-1/llist.cpp > CMakeFiles/Project-1.dir/llist.cpp.i
+CMakeFiles/Project-1.dir/list.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project-1.dir/list.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dennis/CLionProjects/Project-1/list.cpp > CMakeFiles/Project-1.dir/list.cpp.i
 
-CMakeFiles/Project-1.dir/llist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project-1.dir/llist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dennis/CLionProjects/Project-1/llist.cpp -o CMakeFiles/Project-1.dir/llist.cpp.s
+CMakeFiles/Project-1.dir/list.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project-1.dir/list.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dennis/CLionProjects/Project-1/list.cpp -o CMakeFiles/Project-1.dir/list.cpp.s
 
 CMakeFiles/Project-1.dir/bucket.cpp.o: CMakeFiles/Project-1.dir/flags.make
 CMakeFiles/Project-1.dir/bucket.cpp.o: ../bucket.cpp
@@ -146,7 +146,7 @@ CMakeFiles/Project-1.dir/hashTable.cpp.s: cmake_force
 Project__1_OBJECTS = \
 "CMakeFiles/Project-1.dir/main.cpp.o" \
 "CMakeFiles/Project-1.dir/vertex.cpp.o" \
-"CMakeFiles/Project-1.dir/llist.cpp.o" \
+"CMakeFiles/Project-1.dir/list.cpp.o" \
 "CMakeFiles/Project-1.dir/bucket.cpp.o" \
 "CMakeFiles/Project-1.dir/hashTable.cpp.o"
 
@@ -155,7 +155,7 @@ Project__1_EXTERNAL_OBJECTS =
 
 Project-1: CMakeFiles/Project-1.dir/main.cpp.o
 Project-1: CMakeFiles/Project-1.dir/vertex.cpp.o
-Project-1: CMakeFiles/Project-1.dir/llist.cpp.o
+Project-1: CMakeFiles/Project-1.dir/list.cpp.o
 Project-1: CMakeFiles/Project-1.dir/bucket.cpp.o
 Project-1: CMakeFiles/Project-1.dir/hashTable.cpp.o
 Project-1: CMakeFiles/Project-1.dir/build.make

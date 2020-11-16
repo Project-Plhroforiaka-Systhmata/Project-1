@@ -1,19 +1,18 @@
-#include "llist.h"
-#include "DoubleLinkedList.h"
+#include "list.h"
 #include "acutest.h"
 #include "hashTable.h"
 #include "vertex.h"
 #include "string.h"
 #include <ctime>
 
-void test_createllist(void){
-    llist *mylist = new llist();
+void test_createlist(void){
+    list *mylist = new list();
     TEST_ASSERT(mylist->head == nullptr);
     TEST_ASSERT(mylist->tail == nullptr);
 }
 
-void test_insertllist(void){
-    llist *mylist = new llist();
+void test_insertlist(void){
+    list *mylist = new list();
     mylist->insert(new vertex("lalalalalalalalallalalalalalallalalalalalalallal","lalalalalalalalallalalalalalallalalalalalalallal"));
     TEST_ASSERT(mylist->head != nullptr);
     TEST_ASSERT(mylist->head == mylist->tail);
@@ -21,8 +20,8 @@ void test_insertllist(void){
     
 }
 
-void test_popllist(void){
-    llist *mylist = new llist();
+void test_poplist(void){
+    list *mylist = new list();
     mylist->insert(new vertex("lalalalalalalalallalalalalalallalalalalalalallal","lalalalalalalalallalalalalalallalalalalalalallal"));
     vertex *tmp = mylist->pop();
     TEST_ASSERT(tmp != nullptr);
@@ -128,13 +127,13 @@ void test_inserthash(void){
 
 void test_vertexcopy(void){
     vertex *one = new vertex("test","test");
-    llist *tmp = new llist();
+    list *tmp = new list();
     tmp->insert(new vertex("1","1"));
     tmp->insert(new vertex("2","2"));
     tmp->insert(new vertex("3","3"));
     one->specList = tmp;
     vertex *two = new vertex("test","test");
-    tmp = new llist();
+    tmp = new list();
     tmp->insert(new vertex("4","4"));
     tmp->insert(new vertex("5","5"));
     tmp->insert(new vertex("6","6"));
@@ -190,9 +189,9 @@ void test_search(void){
 }
 
 TEST_LIST = {
-    {"llist_create",test_createllist},
-    {"llist_insert",test_insertllist},
-    {"llist_pop",test_popllist},
+    {"list_create",test_createlist},
+    {"list_insert",test_insertlist},
+    {"list_pop",test_poplist},
     {"dll_create",test_createdll},
     {"dll_add",test_insertdll},
     {"dll_pop",test_popdll},
