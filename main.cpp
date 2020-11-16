@@ -58,7 +58,6 @@ int main(int argc, char **argv){
             while ((ch = fgetc(fp)) != EOF)
             {
                 specs+=ch;
-
             }
             fclose(fp);
             hash->insert(realPath,new vertex(realPath,specs));
@@ -78,6 +77,8 @@ int main(int argc, char **argv){
         count = 0;
         while (getline(s, word, ',')) {
             count++;
+
+            //split line by ',' and recognise leftSpecId, rightpecId and label
             switch (count) {
                 case 1:
                     leftSpecId = word;
@@ -90,20 +91,28 @@ int main(int argc, char **argv){
             }
         }
 
+
         if(label == "1"){
+
+            //fix specId formats to match format in hashTable
             leftSpecId.append(".json");
             rightSpecId.append(".json");
             leftSpecId = regex_replace(leftSpecId, regex("//"), "/");
             rightSpecId = regex_replace(rightSpecId, regex("//"), "/");
+
             vertex *vert1, *vert2;
             vert1 = hash->search(leftSpecId);
             vert2 = hash->search(rightSpecId);
+
+            //if leftSpecId and rightSpecId exist and are not already in the same list
             if(vert1 != nullptr && vert2 != nullptr && vert1->specList != vert2->specList) {
+                //copy leftSpecId's list to rightSpecId's list
                 vert1->copyList(vert2->specList);
             }
         }
     }
 
+    //print every vertex's list in the hashable
     for (int i = 0; i < hash->numBuckets; i++) {
         bucket *temp = hash->table[i];
         while(temp != NULL) {
@@ -113,8 +122,6 @@ int main(int argc, char **argv){
             temp = temp->next;
         }
     }
-
-    
 
     delete hash;
     return 0;

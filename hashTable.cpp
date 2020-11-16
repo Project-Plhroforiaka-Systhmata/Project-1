@@ -20,6 +20,8 @@ int hashTable::hashFunction(string key, int buckets) {
 void hashTable::insert(string key, vertex *vertSpec) {
     int index = hashFunction(key, numBuckets);
     bucket *temp = table[index];
+
+    //go to last bucket in the list
     while(temp->next != NULL) {
         temp = temp->next;
     }
@@ -42,10 +44,11 @@ vertex* hashTable::search(string searchStr) {
         }
         temp = temp->next;
     }
-    return nullptr;
+    return NULL;
 }
 
 hashTable::~hashTable() {
+    //delete all buckets
     for (int i = 0; i < numBuckets; i++) {
         bucket *temp = table[i];
         bucket *temp2;
