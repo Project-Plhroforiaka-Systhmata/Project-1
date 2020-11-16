@@ -4,6 +4,8 @@
 #include "vertex.h"
 #include "string.h"
 #include <ctime>
+#include <iostream>
+
 
 void test_createlist(void){
     list *mylist = new list();
@@ -42,53 +44,14 @@ void test_poplist(void){
     mylist->pop();
 }
 
-void test_createdll(void){
-    DoubleLinkedList *list = new DoubleLinkedList();
-     TEST_ASSERT(list->length == 0);
-    TEST_ASSERT(list->first == list->last);
-    TEST_ASSERT(list->first == nullptr);
+
+void test_destroylist(void){
+    list *tmp = new list();
+    tmp->insert(new vertex("test","test"));
+    delete tmp;
+    TEST_ASSERT(sizeof(tmp) == 8);
 }
 
-void test_insertdll(void){
-    DoubleLinkedList *list = new DoubleLinkedList();
-    list->AddNodeToEnd(new Record("test"));
-    TEST_ASSERT(list->length == 1);
-    TEST_ASSERT(list->first != nullptr);
-    TEST_ASSERT(list->last != nullptr);
-    list->AddNodeToEnd(new Record("test"));
-    TEST_ASSERT(list->length == 2);
-    TEST_ASSERT(list->first != list->last);
-
-    TEST_ASSERT(list->first->next == list->last);
-    TEST_ASSERT(list->last->prev == list->first);
-}
-
-void test_destroydll(void){
-    DoubleLinkedList *list = new DoubleLinkedList();
-    list->AddNodeToEnd(new Record("test"));
-    list->freeRam();
-    TEST_ASSERT(list->length == 0);
-    TEST_ASSERT(list->first == nullptr);
-    TEST_ASSERT(list->last == nullptr);
-}
-
-void test_popdll(void){
-    DoubleLinkedList *list = new DoubleLinkedList();
-    list->AddNodeToEnd(new Record("test"));
-    list->pop();
-    TEST_ASSERT(list->length == 0);
-    TEST_ASSERT(list->first == nullptr);
-    TEST_ASSERT(list->last == nullptr);
-    list->AddNodeToEnd(new Record("test"));
-    list->AddNodeToEnd(new Record("test"));
-    list->pop();
-    TEST_ASSERT(list->first == list->last);
-    list->pop();
-    TEST_ASSERT(list->length == 0);
-    TEST_ASSERT(list->first == nullptr);
-    TEST_ASSERT(list->last == nullptr);
-    
-}
 
 void test_createhash(void){
     hashTable *table = new hashTable(150);
@@ -192,10 +155,7 @@ TEST_LIST = {
     {"list_create",test_createlist},
     {"list_insert",test_insertlist},
     {"list_pop",test_poplist},
-    {"dll_create",test_createdll},
-    {"dll_add",test_insertdll},
-    {"dll_pop",test_popdll},
-    {"dll_destroy",test_destroydll},
+    {"list_destroy",test_destroylist},
     {"Hash Table Create",test_createhash},
     {"Hash Table Insert",test_inserthash},
     {"Hash Table Search",test_search},

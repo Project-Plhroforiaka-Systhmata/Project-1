@@ -58,12 +58,10 @@ int main(int argc, char **argv){
             while ((ch = fgetc(fp)) != EOF)
             {
                 specs+=ch;
-                //cout<<ch;
-                
+
             }
             fclose(fp);
             hash->insert(realPath,new vertex(realPath,specs));
-            //cout<<specs<<endl;
         }
         closedir(dirp3);
 
